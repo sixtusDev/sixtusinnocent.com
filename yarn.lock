@@ -7705,7 +7705,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.32.6":
+"sharp@npm:0.32.6, sharp@npm:^0.32.6":
   version: 0.32.6
   resolution: "sharp@npm:0.32.6"
   dependencies:
@@ -7918,6 +7918,7 @@ __metadata:
     remark-collapse: ^0.1.2
     remark-toc: ^9.0.0
     satori: ^0.10.11
+    sharp: 0.32.6
     tailwindcss: ^3.4.1
     typescript: ^5.3.3
   languageName: unknown
