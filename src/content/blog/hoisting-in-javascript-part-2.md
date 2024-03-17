@@ -1,6 +1,6 @@
 ---
 author: Sixtus Innocent
-pubDatetime: 2024-03-17T20:42:26.025Z
+pubDatetime: 2024-03-17T23:37:40.117Z
 title: "Hoisting in JavaScript: A Complete Guide, Part 2"
 slug: hoisting-in-javascript-a-complete-guide-part-2
 featured: false
