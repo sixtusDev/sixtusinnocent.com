@@ -1,6 +1,7 @@
 ---
 author: Sixtus Innocent
 pubDatetime: 2024-03-07T19:51:17.273Z
+modDatetime:
 title: "Hoisting in JavaScript: A Complete Guide, Part 1"
 slug: hoisting-in-javascript-a-complete-guide-part-1
 featured: false
@@ -9,7 +10,7 @@ tags:
   - javascript
   - hoisting
   - web-development
-description: This is a comprehensive guide on hoisting in JavaScript, a concept that confuses many developers. This detailed explanation clarifies how variables (var, let, and const) and functions are hoisted.
+description: This is a comprehensive guide on hoisting in JavaScript, a concept that confuses many developers. Clarifies how variables and functions are hoisted.
 ---
 
 ## Table of contents
@@ -82,12 +83,15 @@ greeter();
 
 **Note:** The JavaScript engine does not re-write the code, this is an analogy to help you understand hoisting.
 
+<a id="hoisting-rules"></a>
+
 ### Hoisting Rules
 
 Let's establish the different rules the interpreter uses to hoist different types of identifiers when executing a JavaScript code. I will use these rules as listed below to explain with examples how the interpreter performs hoisting. Below are the rules:
 
 - **Rule 1:** Variables declared with `var` keyword are hoisted (lifted) to the top of their containing scope, and if they are initialized a value, that value will not be lifted as well, but rather the engine will initialize a default value of `undefined` for that variable identifier.
 - **Rule 2:** All the entire [function declarations](https://www.freecodecamp.org/news/function-declaration-vs-function-expression/) are hoisted (lifted) to the top of their containing scope. Hence, function declarations can be invoked before they are declared in the code.
+  <a id="hoisting-rule3"></a>
 - **Rule 3:** Variables declared with `let` and `const` are hoisted (lifted) to the top of their scope, which is block scope, but the engine does not initialize a default value to them like the way it does with `var`. The JavaScript engine throws `ReferenceError` when these variables are accessed before their declaration. The state before the line of declaration is reached is known as the Temporal Dead Zone (TDZ).
 - **Rule 4:** [Function expressions](https://www.freecodecamp.org/news/function-declaration-vs-function-expression/) follow the hoisting rules of the variable (let, const, or var) they are assigned to. If a function expression is assigned to a `var` declared variable, the variable declaration is hoisted but not the assignment as seen in rule 1, and if assigned to a `let` or `const`, they will remain in the TDZ state until their declaration line is executed as seen in rule 3.
 - **Rule 5:** Class declarations are hoisted similarly to `let` and `const`. Their declaration is hoisted without their initialization, hence you cannot instantiate them before the declaration is reached in the code.
@@ -307,8 +311,14 @@ While `SyntaxError` is thrown during the parsing phase of JavaScript code, `T
 
 ## Conclusion
 
-Hoisting is a very important topic in JavaScript that, if grasped, will help us write better and safe code. This ensures that our code will be more predictable and more organised, hence facilitating debugging. Hoisting is foundational for understanding advanced concepts like closures, execution contexts, and the temporal dead zone.
+Hoisting is a very important topic in JavaScript that, if grasped, will help us write better and safe code. This ensures that our code will be more predictable and more organized, hence facilitating debugging. Hoisting is foundational for understanding advanced concepts like closures, execution contexts, and the temporal dead zone.
 
 I will publish the part two of this article where I will write about temporal dead zone, and how classes are hoisted, among others.
 
 Thank you!
+
+## Further Reading
+
+- [Part two of this article](https://www.sixtusinnocent.com/posts/hoisting-in-javascript-a-complete-guide-part-2)
+- [You Don't Know JS Yet: Scope & Closures by Kyle Simpson](https://www.amazon.com/You-Dont-Know-JS-Yet/dp/B086GD45ZG)
+- [An article on hoisting by Dillion Megida](https://www.freecodecamp.org/news/what-is-hoisting-in-javascript-3)
