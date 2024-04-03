@@ -12,18 +12,31 @@ export interface Props {
   currentPage: number;
   totalPages: number;
   paginatedPosts: CollectionEntry<"blog">[];
+  pageTitle?: string;
+  activeNav?: string;
+  pageDesc?: string;
 }
 
-const { currentPage, totalPages, paginatedPosts } = Astro.props;
+const {
+  currentPage,
+  totalPages,
+  paginatedPosts,
+  pageTitle,
+  pageDesc,
+  activeNav,
+} = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+<Layout title={`${pageTitle || "Posts"} | ${SITE.title}`}>
+  <Header activeNav={activeNav || "posts"} />
+  <Main
+    pageTitle={pageTitle || "Posts"}
+    pageDesc={pageDesc || "All the articles I've posted."}
+  >
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
+          <Card href={data.url || `/posts/${slug}/`} frontmatter={data} />
         ))
       }
     </ul>

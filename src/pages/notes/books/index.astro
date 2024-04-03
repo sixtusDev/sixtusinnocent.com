@@ -1,0 +1,58 @@
+---
+import Card from "@components/Card";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import { slugifyStr } from "@utils/slugify";
+
+export const books = [
+  {
+    id: "nodejs-design-patterns",
+    title: "Node.js Design Patterns",
+    url: `/notes/books/nodejs-design-patterns`,
+    bookCover:
+      "https://sixtusinnocent.com/notes%2Fbooks%2Fnodejs-design-patterns.jpg",
+    authors: "Mario Casciaro, Luciano Mammino",
+    description: "Reading in progress...",
+  },
+];
+---
+
+<Layout title={`Book Notes | ${SITE.title}`}>
+  <Header activeNav="notes" />
+  <Main
+    pageTitle="Book Notes"
+    pageDesc="Notes taken on books I read: I take the notes chapter by chapter. While reading, I highlight important points in the book, and after finishing the chapter, I revisit the highlighted texts and take comprehensive notes on it."
+  >
+    <ul>
+      {
+        books.map(book => (
+          <li class="flex gap-[1rem]">
+            <a href={book.url}>
+              <img src={book.bookCover} class="h-[226px] w-[150px]" />
+            </a>
+            <div class="flex flex-col">
+              <a
+                href={book.url}
+                class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+              >
+                <h2
+                  class="text-lg font-medium decoration-dashed hover:underline"
+                  style={{ viewTransitionName: slugifyStr(book.title) }}
+                >
+                  {book.title}
+                </h2>
+              </a>
+              <p class="text-sm italic">{book.authors}</p>
+              <p>{book.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </Main>
+
+  <Footer noMarginTop={false} />
+</Layout>
