@@ -1,0 +1,32 @@
+---
+import Card from "@components/Card";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+
+const notes = [
+  { title: "Book Notes", url: "/notes/books" },
+  { title: "Course Notes [Coming soon]", url: "" },
+  { title: "Talk Notes [Coming soon]", url: "" },
+];
+---
+
+<Layout title={`Notes | ${SITE.title}`}>
+  <Header activeNav="notes" />
+  <Main
+    pageTitle="Notes"
+    pageDesc="Notes I have taken while reading and studying (books, courses, and talks)"
+  >
+    <ul>
+      {
+        notes.map(({ title, url }) => (
+          <Card href={url} frontmatter={{ title }} />
+        ))
+      }
+    </ul>
+  </Main>
+
+  <Footer noMarginTop={false} />
+</Layout>

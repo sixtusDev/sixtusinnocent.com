@@ -1,3 +1,22 @@
+---
+author: Sixtus Innocent
+pubDatetime: 2024-03-07T19:51:17.273Z
+modDatetime: 2024-03-17T22:50:34.070Z
+title: The Node.js Platform
+slug: nodejs-design-patterns-chapter-one-the-nodejs-platform
+bookId: nodejs-design-patterns
+url: /notes/books/nodejs-design-patterns/nodejs-design-patterns-chapter-one-the-nodejs-platform
+featured: false
+draft: false
+tags:
+  - javascript
+  - node.js
+  - backend-development
+description: "The authors (Mario Casciaro and Luciano Mammino) delved into the internals of Node.js: the platform on which Node.js runs, Node.js runtime environment, and how Node.js works under the hood."
+---
+
+## Table of Contents
+
 ## The Node.js Platform
 
 ### How Node.js works
@@ -24,7 +43,7 @@ I/O operations are slow, because of the layer of communication between the compu
 
 **Non-blocking I/O** operation allow the program to continue executing while the data transfer is still in progress. The thread that issued the I/O operation is not blocked and can perform other operations while the I/O operation is still in progress.
 
-**Techniques for processing non-blocking resources:**
+**Methods for processing non-blocking resources:**
 
 - **Busy-waiting:** Also known as “spinning“ is a technique whereby a program constantly/repeatedly checks for a condition to become true without doing anything else. In the context of non-blocking I/O operation, the program will continuously check if data has been received from an I/O operation like network connection or if a file has been completely read.
   - Pros
@@ -47,6 +66,6 @@ I/O operations are slow, because of the layer of communication between the compu
 
 > “The main idea behind the reactor pattern is to have a handler associated with each I/O operation. A handler in Node.js is represented by a callback (or cb for short) function.”
 
-The asynchronous construct of a Node.js application is based on the reactor pattern whereby the demultiplexer in a blocking manner waits and reacts to I/O operation events. As soon as an I/ operation event occurs (like data arrival on network socket) that the demultiplexer is monitoring, the demultiplexer reacts by unblocking, and pushes the event(s) into the event queue. The event loop polls over the items in the event queue, and invokes the handler (function) in each event.
+The reactor pattern is the heart of the asynchronous construct of a Node.js application whereby the demultiplexer in a blocking manner waits and reacts to I/O operation events. As soon as an I/ operation event occurs (like data arrival on network socket) that the demultiplexer is monitoring, the demultiplexer reacts by unblocking, and pushes the event(s) into the event queue. The event loop polls over the items in the event queue, and invokes the handler (function) in each event.
 
 ---
