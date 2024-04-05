@@ -65,7 +65,7 @@ Consider the code above, the equivalent execution contexts that will be created 
 
 <a id="figure-1"></a>
 
-![JavaScript call stack and execution contexts](https://sixtusinnocent.com/javascript-execution-context%2Fcall-stack-execution-contexts.png)
+![JavaScript call stack and execution contexts](https://assets.sixtusinnocent.com/javascript-execution-context%2Fcall-stack-execution-contexts.png)
 _Figure 1: Execution context for Code Example 1_
 
 **Note:** Execution context is only created for function and global scopes. It is not created for block scopes.
@@ -147,7 +147,7 @@ _Code Example 2_
 
 For “Code Example 2“ which is the code above, below is the call stack and execution contexts for the `global`, `sayHello` function, and `sayHi` function.
 
-![The call stack and execution context for the above code](https://sixtusinnocent.com/javascript-execution-context%2Fcode-example-1-call-stack-execution-context.png)
+![The call stack and execution context for the above code](https://assets.sixtusinnocent.com/javascript-execution-context%2Fcode-example-1-call-stack-execution-context.png)
 _Figure 2: Execution context for Code Example 2_
 
 Here are the steps of actions and the corresponding execution context activations for the code above:

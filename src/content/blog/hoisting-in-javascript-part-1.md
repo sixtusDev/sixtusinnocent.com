@@ -139,7 +139,7 @@ var sayHi = function printHi() {
 };
 ```
 
-![`sayHi()` function log](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-28-07-52-25-image.png)
+![`sayHi()` function log](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-28-07-52-25-image.png)
 
 `sayHi` is an identifier for a named function expression, called `printHi`. The JavaScript engine throws a `TypeError` exception when it executes the code above, as seen in the browser console log above. Notice that it's not a `ReferenceError`, which means that the variable `sayHi` was hoisted and assigned a value. What value did the engine assign it to during hoisting? It was assigned `undefined`, because JavaScript assigns all variables with the `var` keyword that are hoisted a default value of `undefined` (see rule 1 of hoisting). So when `var sayHi` is lifted, it becomes `var sayHi = undefined`. Hence, invoking `sayHi` which is of type undefined will throw a `TypeError` exception by the engine, because undefined is not a function and cannot be invoked.
 
@@ -153,7 +153,7 @@ var sayHi = function printHi() {
 };
 ```
 
-![`printHi()` function log](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-28-08-09-48-image.png)
+![`printHi()` function log](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-28-08-09-48-image.png)
 
 Oh, my! The engine throws a different kind of exception. This time it's `ReferenceError`exception, because `printHi` is not defined anywhere in the code. Recall that because of hoisting, the engine appears to lift `var sayHi` up its scope, which is the global scope, and then assigns it a default value of `undefined`, because it's defined using the `var` keyword. Let's rewrite the code like how the interpreter would have appeared to rewrite it.
 
@@ -215,7 +215,7 @@ console.log(languages);
 
 Notice the variable redeclaration of languages. What gets printed to the browser console?
 
-![Code execution logs 1](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-29-06-38-35-image.png)
+![Code execution logs 1](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-02-29-06-38-35-image.png)
 
 The second log to the browser console is not `undefined` as you might have thought, it's still the initialized array of language in the first declaration. This is possible because of hoisting, and how the JavaScript engine appears to lift variable declarations, function declaration, and classes to the top of their scope. Let's re-arrange the code to mirror how the engine would have supposedly rearranged it.
 
@@ -239,7 +239,7 @@ var languages = ["Dutch", "French"];
 console.log(languages);
 ```
 
-![Code execution logs 2](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-01-38-45-image.png)
+![Code execution logs 2](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-01-38-45-image.png)
 
 I know you guessed the answer right! Any variable redeclared and initialized with the `var` keyword, the engine will override the value of the previous variable that sits [lexically (physically)](https://www.educative.io/answers/lexical-scope-in-javascript) within the same scope.
 
@@ -253,7 +253,7 @@ let languages = ["Dutch", "French"];
 console.log(languages);
 ```
 
-![Code execution logs 3](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-01-54-26-image.png)
+![Code execution logs 3](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-01-54-26-image.png)
 
 It appears that the code didn't reach the execution phase, because of the type of exception thrown by the JavaScript engine. `SyntaxError` are caught early by the interpreter during the paring phase before code execution. This means that redeclaration is not allowed with the `let` keyword.
 
@@ -267,7 +267,7 @@ var languages = ["Dutch", "French"];
 console.log(languages);
 ```
 
-![Code executions log 4](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
+![Code executions log 4](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
 
 ```javascript
 var languages = ["English", "Hausa", "Igbo", "Yoruba"];
@@ -277,7 +277,7 @@ let languages = ["Dutch", "French"];
 console.log(languages);
 ```
 
-![Code execution logs 5](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
+![Code execution logs 5](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
 
 The same `SyntaxError` raised using only `let` is raised for the two cases where `var` is used after `let` for redeclaration and vice-versa.
 
@@ -291,7 +291,7 @@ const languages = ["Dutch", "French"];
 console.log(languages);
 ```
 
-![Code execution logs 6](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
+![Code execution logs 6](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-01-02-31-05-image.png)
 
 The above `SyntaxError` exception raised by the JavaScript engine is a clear indication that the engine does not support variable redeclaration with the `const` keyword. The same `SyntaxError` exception raised above will be raised when a variable is declared with `const` and not initialized at the same time.  What happens if a variable declared and initialized with the `const`keyword is reassigned a value? Consider this example:
 
@@ -305,7 +305,7 @@ console.log(languages);
 
 In the above code, languages is being reassigned a value. When the engine reaches that line while executing the code, it will halt, and throw a `TypeError` exception as seen below, because `const` cannot be reassigned a value.
 
-![Code execution logs 7](https://sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-02-11-57-39-image.png)
+![Code execution logs 7](https://assets.sixtusinnocent.com/hoisting-in-javascript-part-1/2024-03-02-11-57-39-image.png)
 
 While `SyntaxError` is thrown during the parsing phase of JavaScript code, `TypeError` is thrown during the execution phase, hence the reason for the log on the browser console of the first languages.
 
