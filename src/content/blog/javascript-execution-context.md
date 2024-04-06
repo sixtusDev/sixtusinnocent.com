@@ -1,6 +1,6 @@
 ---
 author: Sixtus Innocent
-pubDatetime: 2024-04-03T14:18:33.622Z
+pubDatetime: 2024-04-06T09:21:20.925Z
 title: "JavaScript Internals: The Execution Context"
 slug: javascript-internals-the-execution-context
 featured: false
