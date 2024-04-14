@@ -1,7 +1,7 @@
 ---
 author: Sixtus Innocent
 pubDatetime: 2024-04-14T22:49:19.475Z
-title: "JavaScript Internals: The JavaScript Runtime Environment Explained"
+title: "JavaScript Internals: The JavaScript Runtime Environment"
 slug: javascript-internals-javascript-runtime-environment
 featured: false
 draft: false
