@@ -40,7 +40,7 @@ The JavaScript runtime environment refers to the platform in which JavaScript co
    3. Microtask queue
    4. Event loop
 
-![JavaScript Runtime Environment](/src/assets/images/javascript-runtime-enviroment/JSRuntimeEnvironment.png)
+![JavaScript Runtime Environment](../../assets/images/javascript-runtime-enviroment/JSRuntimeEnvironment.png)
 _Figure 1: JavaScript Runtime Environment_
 
 ## JavaScript Engine
