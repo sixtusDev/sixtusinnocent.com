@@ -15,6 +15,7 @@ export interface Props {
   pageTitle?: string;
   activeNav?: string;
   pageDesc?: string;
+  url?: string;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   pageTitle,
   pageDesc,
   activeNav,
+  url,
 } = Astro.props;
 ---
 
@@ -45,8 +47,8 @@ const {
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/posts/${currentPage + 1}/`}
+    prevUrl={`${url ?? "/posts"}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`${url ?? "/posts"}/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />
