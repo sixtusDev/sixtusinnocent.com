@@ -4,7 +4,7 @@ import postFilter from "./postFilter";
 const getSortedPosts = (posts: CollectionEntry<"blog" | "notes">[]) => {
   if (!posts) return [];
 
-  const isBookCollection = posts[0].collection;
+  const isBookCollection = !!posts[0]?.data?.bookId;
   if (isBookCollection) return posts;
 
   return posts
