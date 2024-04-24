@@ -11,7 +11,9 @@ import { SITE } from "@config";
 const posts = await getCollection("blog");
 const books = await getCollection("bookNotes");
 
-let tags = getUniqueTags(posts);
+const combinedPosts = [...posts, ...books];
+
+let tags = getUniqueTags(combinedPosts);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>

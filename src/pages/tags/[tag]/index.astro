@@ -7,20 +7,25 @@ import getUniqueTags from "@utils/getUniqueTags";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
+  const bookNotes = await getCollection("bookNotes");
 
-  const tags = getUniqueTags(posts);
+  const combinedPosts = [...posts, ...bookNotes];
+
+  const tags = getUniqueTags(combinedPosts);
 
   return tags.map(({ tag, tagName }) => {
     return {
       params: { tag },
-      props: { tag, tagName, posts },
+      props: { tag, tagName, posts, bookNotes },
     };
   });
 }
 
-const { tag, tagName, posts } = Astro.props;
+const { tag, tagName, posts, bookNotes } = Astro.props;
 
-const postsByTag = getPostsByTag(posts, tag);
+const combinedPosts = [...posts, ...bookNotes];
+
+const postsByTag = getPostsByTag(combinedPosts, tag);
 
 const pagination = getPagination({
   posts: postsByTag,

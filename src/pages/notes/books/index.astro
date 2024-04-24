@@ -1,5 +1,4 @@
 ---
-import Card from "@components/Card";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import { SITE } from "@config";
@@ -12,9 +11,17 @@ export const books = [
     id: "nodejs-design-patterns",
     title: "Node.js Design Patterns",
     url: `/notes/books/nodejs-design-patterns`,
-    bookCover:
-      "https://assets.sixtusinnocent.com/notes%2Fbooks%2Fnodejs-design-patterns.jpg",
+    bookCover: "/src/assets/images/bookcovers/nodejs-design-patterns.jpg",
     authors: "Mario Casciaro, Luciano Mammino",
+    description: "Reading in progress...",
+  },
+  {
+    id: "the-normal-christian-life",
+    title: "The Normal Christian Life",
+    url: `/notes/books/the-normal-christian-life`,
+    bookCover:
+      "/src/assets/images/bookcovers/the-normal-christian-life-watchman-nee-book-cover.jpg",
+    authors: "Watchman Nee",
     description: "Reading in progress...",
   },
 ];
@@ -26,12 +33,12 @@ export const books = [
     pageTitle="Book Notes"
     pageDesc="Notes taken on books I read: I take the notes chapter by chapter. While reading, I highlight important points in the book, and after finishing the chapter, I revisit the highlighted texts and take comprehensive notes on it."
   >
-    <ul>
+    <ul class="flex flex-col gap-5">
       {
         books.map(book => (
           <li class="flex gap-[1rem]">
             <a href={book.url}>
-              <img src={book.bookCover} class="h-[226px] w-[150px]" />
+              <img src={book.bookCover} alt={book.title} />
             </a>
             <div class="flex flex-col">
               <a
