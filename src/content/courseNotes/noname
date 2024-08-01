@@ -1,0 +1,72 @@
+### Watchers & Computed Properties
+
+Vue is reactive, meaning, the framework automatically tracks, and updates the UI whenever the state of the application changes.
+
+#### Watchers
+
+Watchers are used to perform side effects in response to state changes. They are ideal for scenarios where you need to execute code in response to state changes, such as data fetching, adjusting child component properties, or logging. Unlike computed properties, watchers do not return a value but rather provide a way to execute code in reaction to changes.
+
+##### Key Features
+
+- Execute code on data changes
+- No caching
+- Used for side effects or asynchronous operations
+
+```html
+<template>
+  <div>
+    <input v-model="inputValue" placeholder="Type something..." />
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        inputValue: "",
+      };
+    },
+    watch: {
+      inputValue(newVal, oldVal) {
+        console.log(`Input value changed from ${oldVal} to ${newVal}`);
+      },
+    },
+  };
+</script>
+```
+
+#### Computed Properties
+
+Computed properties are used to derive new reactive data from existing reactive data sources. They are useful when you need to perform calculations or transformations on data for presentation purposes. They are also cached based on their dependencies, and they only re-evaluate when its reactive dependencies have changed.
+
+##### Key Features
+
+- Reactive
+- Cached
+- Used for Data Transformation
+
+```html
+<template>
+  <div>
+    <p>First Name: <input v-model="firstName" placeholder="First Name" /></p>
+    <p>Last Name: <input v-model="lastName" placeholder="Last Name" /></p>
+    <p>Full Name: {{ fullName }}</p>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        firstName: "",
+        lastName: "",
+      };
+    },
+    computed: {
+      fullName() {
+        return `${this.firstName} ${this.lastName}`.trim();
+      },
+    },
+  };
+</script>
+```
