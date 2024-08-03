@@ -24,7 +24,7 @@ const posts = (await getCollection("bookNotes")).filter(post => post.id.startsWi
 
 const sortedPosts = getSortedPosts(posts);
 
-const pageTitle = `${book.title} Chapters`;
+const pageTitle = book.title;
 const activeNav = "notes";
 const pageDesc = `All the notes I have taken on ${book.title}`;
 ---

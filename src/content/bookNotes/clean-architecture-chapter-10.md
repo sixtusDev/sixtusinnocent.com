@@ -9,7 +9,7 @@ featured: false
 draft: false
 tags:
   - software-architecture
-  - - clean-architecture
+  - clean-architecture
 ---
 
 The Interface Segregation Principle (ISP) is against software artifacts depending on stuff they don't need. It states that clients should not be forced to depend on stuff they do not use.
