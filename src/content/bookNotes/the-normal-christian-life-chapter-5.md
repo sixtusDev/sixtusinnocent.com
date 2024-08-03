@@ -1,15 +1,14 @@
 ---
 author: Sixtus Innocent
-pubDatetime: 2024-03-23T18:00:17.273Z
+pubDatetime: 2024-04-18T18:00:17.273Z
 title: "Chapter 5: The Divide of the Cross"
-slug: the-normal-christian-life-chapter-five-the-divide-of-the-cross
+slug: chapter-5-the-divide-of-the-cross
 bookId: the-normal-christian-life
-url: /notes/books/the-normal-christian-life/the-normal-christian-life-chapter-five-the-divide-of-the-cross
+url: /notes/books/the-normal-christian-life/chapter-5-the-divide-of-the-cross
 featured: false
 draft: false
 tags:
   - faith-life
-description: "Watchman Nee dissected the two creations: new creation and old creation. With scriptural references, he explained the way through which we are re-created and translated to Gods kingdom"
 ---
 
 There are two creations: the old creation, and the new creation. Dissected.

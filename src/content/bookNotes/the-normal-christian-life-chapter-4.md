@@ -2,14 +2,13 @@
 author: Sixtus Innocent
 pubDatetime: 2024-04-17T20:23:15.462Z
 title: "Chapter 4: The Path of Progress: Reckoning"
-slug: the-normal-christian-life-chapter-four-the-path-of-progress-reckoning
+slug: chapter-4-the-path-of-progress-reckoning
 bookId: the-normal-christian-life
-url: /notes/books/the-normal-christian-life/the-normal-christian-life-chapter-four-the-path-of-progress-reckoning
+url: /notes/books/the-normal-christian-life/chapter-4-the-path-of-progress-reckoning
 featured: false
 draft: false
 tags:
   - faith-life
-description: "What's the next step after knowing that you were crucified with Christ? Watchman Nee explained the next stage after knowing, which is reckoning."
 ---
 
 Once you know and have a revelation that your old man has been crucified with Christ, the next step is to reckon it.

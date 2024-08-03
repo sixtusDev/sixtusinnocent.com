@@ -2,14 +2,13 @@
 author: Sixtus Innocent
 pubDatetime: 2024-04-17T17:55:15.462Z
 title: "Chapter 3: The Path Of Progress: Knowing"
-slug: the-normal-christian-life-chapter-three-the-path-of-progress-knowing
+slug: chapter-3-the-path-of-progress-knowing
 bookId: the-normal-christian-life
-url: /notes/books/the-normal-christian-life/the-normal-christian-life-chapter-three-the-path-of-progress-knowing
+url: /notes/books/the-normal-christian-life/chapter-3-the-path-of-progress-knowing
 featured: false
 draft: false
 tags:
   - faith-life
-description: "Knowing that we were crucified, died, burried, and resurrected with Christ is powerful, because we cannot experience the victory over sin without having this knowledge."
 ---
 
 “If any man is in Christ, he is a new creature: the old things are passed away; behold they are become new“ (2 Cor 5:17) — Old life ends with the cross; new life begins with the resurrection.
