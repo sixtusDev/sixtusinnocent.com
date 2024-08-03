@@ -2,14 +2,13 @@
 author: Sixtus Innocent
 pubDatetime: 2024-04-16T17:10:00.462Z
 title: "Chapter 2: The Cross of Christ"
-slug: the-normal-christian-life-chapter-two-the-cross-of-christ
+slug: chapter-2-the-cross-of-christ
 bookId: the-normal-christian-life
-url: /notes/books/the-normal-christian-life/the-normal-christian-life-chapter-two-the-cross-of-christ
+url: /notes/books/the-normal-christian-life/chapter-2-the-cross-of-christ
 featured: false
 draft: false
 tags:
   - faith-life
-description: "The author did a great job by explaining in details with examples, sin and its remedy with scriptural references."
 ---
 
 The book of Romans is divided into two parts. The first part deals with man's justification (Romans 3:24-26; 4:5,25), while the second part deals with man's sanctification (Rom. 6:19,22).

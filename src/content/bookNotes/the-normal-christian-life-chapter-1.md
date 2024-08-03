@@ -2,14 +2,13 @@
 author: Sixtus Innocent
 pubDatetime: 2024-04-16T16:00:15.462Z
 title: "Chapter 1: The Blood of Christ"
-slug: the-normal-christian-life-chapter-one-the-blood-of-christ
+slug: chapter-1-the-blood-of-christ
 bookId: the-normal-christian-life
-url: /notes/books/the-normal-christian-life/the-normal-christian-life-chapter-one-the-blood-of-christ
+url: /notes/books/the-normal-christian-life/chapter-1-the-blood-of-christ
 featured: false
 draft: false
 tags:
   - faith-life
-description: "Watchman Nee expounded the difference between sins and sin. He further threw indepth light for the solution of sins as documented in the Scriptures."
 ---
 
 God has only one solution for the need of men -- Jesus Christ
