@@ -2,7 +2,6 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
-import getPagination from "@utils/getPagination";
 import { books } from "../index.astro";
 
 export interface Props {
@@ -21,17 +20,9 @@ export async function getStaticPaths() {
 const { id } = Astro.params;
 const { book } = Astro.props;
 
-const posts = (await getCollection("bookNotes")).filter(post =>
-  post.id.startsWith(id)
-);
+const posts = (await getCollection("bookNotes")).filter(post => post.id.startsWith(id));
 
 const sortedPosts = getSortedPosts(posts);
-
-const pagination = getPagination({
-  posts: sortedPosts,
-  page: 1,
-  isIndex: true,
-});
 
 const pageTitle = `${book.title} Chapters`;
 const activeNav = "notes";
@@ -39,7 +30,8 @@ const pageDesc = `All the notes I have taken on ${book.title}`;
 ---
 
 <Posts
-  {...pagination}
+  posts={sortedPosts}
+  isPaginated={false}
   url={book.url}
   pageTitle={pageTitle}
   activeNav={activeNav}

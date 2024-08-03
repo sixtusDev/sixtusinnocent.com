@@ -9,9 +9,10 @@ import { slugifyStr } from "@utils/slugify";
 export const books = [
   {
     id: "nodejs-design-patterns",
-    title: "Node.js Design Patterns",
+    title:
+      "Node.js Design Patterns: Design and implement production-grade Node.js applications using proven patterns and techniques",
     url: `/notes/books/nodejs-design-patterns`,
-    bookCover: "/src/assets/images/bookcovers/nodejs-design-patterns.jpg",
+    bookCover: "https://m.media-amazon.com/images/I/71OMPF7vzmL._SY522_.jpg",
     authors: "Mario Casciaro, Luciano Mammino",
     description: "Reading in progress...",
   },
@@ -19,9 +20,16 @@ export const books = [
     id: "the-normal-christian-life",
     title: "The Normal Christian Life",
     url: `/notes/books/the-normal-christian-life`,
-    bookCover:
-      "/src/assets/images/bookcovers/the-normal-christian-life-watchman-nee-book-cover.jpg",
+    bookCover: "https://m.media-amazon.com/images/I/81SNyzqfcML._SY522_.jpg",
     authors: "Watchman Nee",
+    description: "Reading in progress...",
+  },
+  {
+    id: "clean-architecture",
+    title: "Clean Architecture: A Craftman's Guide to Software Structure and Design",
+    url: "/notes/books/clean-architecture",
+    bookCover: "https://m.media-amazon.com/images/I/61r4tYVsRVL._SY522_.jpg",
+    authors: "Robert C. Martin",
     description: "Reading in progress...",
   },
 ];
@@ -31,16 +39,16 @@ export const books = [
   <Header activeNav="notes" />
   <Main
     pageTitle="Book Notes"
-    pageDesc="Notes taken on books I read: I take the notes chapter by chapter. While reading, I highlight important points in the book, and after finishing the chapter, I revisit the highlighted texts and take comprehensive notes on it."
+    pageDesc="Notes taken on books I read: I take the notes chapter by chapter. While reading, I highlight important points in the book. After finishing a chapter, I revisit the highlighted texts and take comprehensive notes on them."
   >
-    <ul class="flex flex-col gap-5">
+    <ul class="mb-[5rem] flex flex-col gap-[2rem]">
       {
         books.map(book => (
-          <li class="flex gap-[1rem]">
-            <a href={book.url}>
-              <img src={book.bookCover} alt={book.title} />
+          <li class="flex flex-col items-start gap-[1rem] border-skin-line sm:flex-row sm:gap-[1.2rem]">
+            <a class="flex h-[266.538px] w-[216px] items-center justify-center bg-gray-200" href={book.url}>
+              <img alt={book.title} src={book.bookCover} style="max-width: 216px; max-height: 266.538px;" />
             </a>
-            <div class="flex flex-col">
+            <div class="flex flex-1 flex-col pb-[1rem] pt-[1rem]">
               <a
                 href={book.url}
                 class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
@@ -52,7 +60,7 @@ export const books = [
                   {book.title}
                 </h2>
               </a>
-              <p class="text-sm italic">{book.authors}</p>
+              <p class="mb-[0.5rem] text-sm italic">{book.authors}</p>
               <p>{book.description}</p>
             </div>
           </li>
