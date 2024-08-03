@@ -9,47 +9,37 @@ import Card from "@components/Card";
 import { SITE } from "@config";
 
 export interface Props {
-  currentPage: number;
-  totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  currentPage?: number;
+  totalPages?: number;
+  posts: CollectionEntry<"blog">[];
   pageTitle?: string;
   activeNav?: string;
   pageDesc?: string;
   url?: string;
+  isPaginated?: boolean;
 }
 
-const {
-  currentPage,
-  totalPages,
-  paginatedPosts,
-  pageTitle,
-  pageDesc,
-  activeNav,
-  url,
-} = Astro.props;
+const { currentPage, totalPages, posts, pageTitle, pageDesc, activeNav, url, isPaginated = true } = Astro.props;
 ---
 
 <Layout title={`${pageTitle || "Posts"} | ${SITE.title}`}>
   <Header activeNav={activeNav || "posts"} />
-  <Main
-    pageTitle={pageTitle || "Posts"}
-    pageDesc={pageDesc || "All the articles I've posted."}
-  >
+  <Main pageTitle={pageTitle || "Posts"} pageDesc={pageDesc || "All the articles I've posted."}>
     <ul>
-      {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={data.url || `/posts/${slug}/`} frontmatter={data} />
-        ))
-      }
+      {posts.map(({ data, slug }) => <Card href={data.url || `/posts/${slug}/`} frontmatter={data} />)}
     </ul>
   </Main>
 
-  <Pagination
-    {currentPage}
-    {totalPages}
-    prevUrl={`${url ?? "/posts"}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`${url ?? "/posts"}/${currentPage + 1}/`}
-  />
+  {
+    isPaginated && currentPage && totalPages ? (
+      <Pagination
+        {currentPage}
+        {totalPages}
+        prevUrl={`${url ?? "/posts"}${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+        nextUrl={`${url ?? "/posts"}/${currentPage + 1}/`}
+      />
+    ) : null
+  }
 
-  <Footer noMarginTop={totalPages > 1} />
+  <Footer noMarginTop={(totalPages ?? posts.length) > 1} />
 </Layout>
