@@ -1,6 +1,6 @@
 ---
 author: Sixtus Innocent
-pubDatetime: 2024-03-07T19:51:17.273Z
+pubDatetime: 2024-08-03T02:55:23.091Z
 title: "A Closer Look at the `this` Keyword in JavaScript, Part 1"
 slug: a-closer-look-at-the-this-keyword-in-javascript-part-1
 featured: false
@@ -8,7 +8,7 @@ draft: false
 tags:
   - javascript
   - web-development
-description: In progress...
+description: The JavaScript “this” keyword can be daunting to grasp, but in this article, I exhaustively unravelled it with detailed examples.
 ---
 
 ## Table of contents
