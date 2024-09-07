@@ -14,14 +14,11 @@ export interface Props {
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  const books = await getCollection("bookNotes");
 
-  const combinedPosts = [...posts, ...books];
-
-  const tags = getUniqueTags(combinedPosts);
+  const tags = getUniqueTags(posts);
 
   return tags.flatMap(({ tag, tagName }) => {
-    const tagPosts = getPostsByTag(combinedPosts, tag);
+    const tagPosts = getPostsByTag(posts, tag);
     const totalPages = getPageNumbers(tagPosts.length);
 
     return totalPages.map(page => ({
@@ -35,11 +32,8 @@ const { page } = Astro.params;
 const { tag, tagName } = Astro.props;
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
-const books = await getCollection("bookNotes", ({ data }) => !data.draft);
 
-const combinedPosts = [...posts, ...books];
-
-const postsByTag = getPostsByTag(combinedPosts, tag);
+const postsByTag = getPostsByTag(posts, tag);
 
 const pagination = getPagination({
   posts: postsByTag,
