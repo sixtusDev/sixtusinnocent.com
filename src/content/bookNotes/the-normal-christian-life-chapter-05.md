@@ -7,8 +7,6 @@ bookId: the-normal-christian-life
 url: /notes/books/the-normal-christian-life/chapter-5-the-divide-of-the-cross
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 There are two creations: the old creation, and the new creation. Dissected.
