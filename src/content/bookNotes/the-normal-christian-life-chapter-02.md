@@ -7,8 +7,6 @@ bookId: the-normal-christian-life
 url: /notes/books/the-normal-christian-life/chapter-2-the-cross-of-christ
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 The book of Romans is divided into two parts. The first part deals with man's justification (Romans 3:24-26; 4:5,25), while the second part deals with man's sanctification (Rom. 6:19,22).

@@ -7,8 +7,6 @@ bookId: the-normal-christian-life
 url: /notes/books/the-normal-christian-life/chapter-3-the-path-of-progress-knowing
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 “If any man is in Christ, he is a new creature: the old things are passed away; behold they are become new“ (2 Cor 5:17) — Old life ends with the cross; new life begins with the resurrection.

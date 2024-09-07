@@ -7,8 +7,6 @@ bookId: the-normal-christian-life
 url: /notes/books/the-normal-christian-life/chapter-4-the-path-of-progress-reckoning
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 Once you know and have a revelation that your old man has been crucified with Christ, the next step is to reckon it.

@@ -7,8 +7,6 @@ bookId: the-normal-christian-life
 url: /notes/books/the-normal-christian-life/chapter-1-the-blood-of-christ
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 God has only one solution for the need of men -- Jesus Christ
