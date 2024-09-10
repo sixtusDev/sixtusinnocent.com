@@ -1,6 +1,6 @@
 ---
 author: Sixtus Innocent
-pubDatetime: 2024-09-10T02:41:03.091Z
+pubDatetime: 2024-09-10T04:14:25.546Z
 title: "Part 2: Letters"
 slug: part-2-letters
 bookId: the-practice-of-the-presence-of-god-in-modern-english

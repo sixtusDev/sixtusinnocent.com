@@ -7,8 +7,6 @@ bookId: understanding-financial-prosperity
 url: /notes/books/understanding-financial-prosperity/introduction
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 Just like a father takes pleasure in the prosperity of his child, Our heavenly father (God) also takes pleasure in our prosperity.
