@@ -6,6 +6,9 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import { slugifyStr } from "@utils/slugify";
 
+import thePracticeOfHisPresenceBookCover from "../../../assets/images/bookcovers/the-practice-of-the-presence-of-god-book-cover.jpg";
+import sitWalkStandBookCover from "../../../assets/images/bookcovers/sit-walk-stand-book-cover.jpg";
+
 export const books = [
   {
     id: "nodejs-design-patterns",
@@ -23,8 +26,7 @@ export const books = [
     bookCover: "https://m.media-amazon.com/images/I/81SNyzqfcML._SY522_.jpg",
     authors: "Watchman Nee",
     description: `A book that captures and explains the finished works of Christ for humanity.
-      Watchman Nee explains what the blood, death, burial, resurrection, glorification of Christ has wrought for us. 
-      He further goes to teach how to live a victorious Christian life by first knowing what Christ did for us and resting on Him.`,
+      Watchman Nee explains what the blood, death, burial, resurrection, glorification of Christ has wrought for us.`,
   },
   {
     id: "clean-architecture",
@@ -44,11 +46,21 @@ export const books = [
   },
   {
     id: "sit-walk-stand",
-    title: "Sit, Walk, Stand",
+    title: "Sit, Walk, Stand: The Process of Christian Maturity",
     url: "/notes/books/sit-walk-stand",
-    bookCover: "",
+    bookCover: sitWalkStandBookCover.src,
     authors: "Watchman Nee",
-    description: "",
+    description: `Sit, walk, and stand are keywords in the Book of Ephesians. It's essential for every Christian to know them to live a 
+    victorious Christian life.`,
+  },
+  {
+    id: "the-practice-of-the-presence-of-god-in-modern-english",
+    title: "The Practice of the Presence of God In Modern English",
+    url: "/notes/books/the-practice-of-the-presence-of-god-in-modern-english",
+    bookCover: thePracticeOfHisPresenceBookCover.src,
+    authors: "Brother Lawrence",
+    description: `This book will expose you to the protocol of GOD's presence. Brother Lawrence in his conversations and letters 
+    descriped how he maintained a constant communion with GOD every moment.`,
   },
 ];
 ---
