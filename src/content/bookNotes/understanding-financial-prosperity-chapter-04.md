@@ -7,8 +7,6 @@ bookId: understanding-financial-prosperity
 url: /notes/books/understanding-financial-prosperity/chapter-4-affection
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 Affection is delightsome commitment to God and getting involved in his program with excitement. Deuteronomy 28:47,48; Jeremiah 23:36-39

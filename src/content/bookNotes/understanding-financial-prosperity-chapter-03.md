@@ -7,8 +7,6 @@ bookId: understanding-financial-prosperity
 url: /notes/books/understanding-financial-prosperity/chapter-3-dedication
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 > My son give me thine heart, and let thine eyes observe my ways. — Proverbs 23:26

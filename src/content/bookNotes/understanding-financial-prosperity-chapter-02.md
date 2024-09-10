@@ -7,8 +7,6 @@ bookId: understanding-financial-prosperity
 url: /notes/books/understanding-financial-prosperity/chapter-2-consecretion
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 > Say ye to the righteous, that it shall be well with him, for they shall eat the fruit of their doings. Isaiah 3:10

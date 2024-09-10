@@ -7,8 +7,6 @@ bookId: understanding-financial-prosperity
 url: /notes/books/understanding-financial-prosperity/chapter-1-covenant-dimension-of-prosperity
 featured: false
 draft: false
-tags:
-  - faith-life
 ---
 
 > Prosperity in the kingdom doesn't answer to fasting, nor does it answer to prayer, or prayer of agreement! It only answers to your understanding and practice of covenant details! — Bishop David Oyedepo
